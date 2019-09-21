@@ -27,13 +27,15 @@ namespace Platformer.Mechanics
         /// </summary>
         public float jumpTakeOffSpeed = 7;
 
-        public JumpState jumpState = JumpState.Grounded;
+        [HideInInspector] public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
-        /*internal new*/ public Collider2D collider2d;
-        /*internal new*/ public AudioSource audioSource;
-        public Health health;
-        public bool controlEnabled = true;
-
+        /*internal new*/
+        [HideInInspector] public Collider2D collider2d;
+        /*internal new*/
+        [HideInInspector] public AudioSource audioSource;
+        [HideInInspector] public Health health;
+        [HideInInspector] public bool controlEnabled = true;
+        
         bool jump;
         Vector2 move;
         SpriteRenderer spriteRenderer;
@@ -55,10 +57,10 @@ namespace Platformer.Mechanics
         {
             if (controlEnabled)
             {
-                move.x = Input.GetAxis("Horizontal");
-                if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
+                move.x = HorizontalInput();
+                if (jumpState == JumpState.Grounded && JumpPressed())
                     jumpState = JumpState.PrepareToJump;
-                else if (Input.GetButtonUp("Jump"))
+                else if (JumpReleased())
                 {
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
@@ -70,6 +72,21 @@ namespace Platformer.Mechanics
             }
             UpdateJumpState();
             base.Update();
+        }
+
+        protected virtual float HorizontalInput()
+        {
+            return Input.GetAxis("Horizontal");
+        }
+
+        protected virtual bool JumpPressed()
+        {
+            return Input.GetButtonDown("Jump");
+        }
+
+        protected virtual bool JumpReleased()
+        {
+            return Input.GetButtonUp("Jump");
         }
 
         void UpdateJumpState()
