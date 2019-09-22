@@ -9,23 +9,19 @@ namespace Platformer.Mechanics.Mobile
     /// </summary>
     public class MobilePlayerController : PlayerController
     {
-        public JoystickInput joystick;
-
-        public JumpInput jumpInput;
-
         protected override float HorizontalInput()
         {
-            return joystick.HorizontalAxis;
+            return JoystickInput.Instance.HorizontalAxis;
         }
 
         protected override bool JumpPressed()
         {
-            return jumpInput.JumpPressed;
+            return JumpInput.Instance.JumpPressed;
         }
 
         protected override bool JumpReleased()
         {
-            return !jumpInput.JumpPressed;
+            return !JumpInput.Instance.JumpPressed;
         }
     }
 }

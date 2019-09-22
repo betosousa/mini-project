@@ -9,7 +9,6 @@ namespace Platformer.Mechanics.Mobile
     /// <summary>
     /// Base visual response for user input
     /// </summary>
-
     public class BaseInput : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         protected Color defaultColor;

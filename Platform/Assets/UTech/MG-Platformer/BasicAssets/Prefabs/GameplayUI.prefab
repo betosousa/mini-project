@@ -100,19 +100,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2992605480378597620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029876680461877898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be2a1d794d74e8cc6b40ce05f45a70a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressedColor: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0.5882353}
 --- !u!1 &1315877039707771745
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,19 +186,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f27fc7786e1acd929a74f4730422458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressedColor: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0.5882353}
---- !u!114 &1759637681909620712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3693082388851416234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be2a1d794d74e8cc6b40ce05f45a70a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pressedColor: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0.5882353}
@@ -496,18 +470,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 353f61309d43262669230034f39c7124, type: 3}
---- !u!1 &1029876680461877898 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1686019781845792357, guid: 353f61309d43262669230034f39c7124,
-    type: 3}
-  m_PrefabInstance: {fileID: 1814714724597675247}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3693082388851416234 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3057767884914550853, guid: 353f61309d43262669230034f39c7124,
-    type: 3}
-  m_PrefabInstance: {fileID: 1814714724597675247}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7535510795933918224 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8195612654573949183, guid: 353f61309d43262669230034f39c7124,

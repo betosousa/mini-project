@@ -15,6 +15,20 @@ namespace Platformer.Mechanics.Mobile
         protected bool jumpPressed;
         public bool JumpPressed { get { return jumpPressed; } }
 
+        public static JumpInput Instance;
+
+        void Awake()
+        {
+            if(Instance == null)
+            {
+                Instance = this;
+            }
+            else if(Instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+
         public override void OnPointerEnter(PointerEventData pointerEventData)
         {
             jumpPressed = true;
