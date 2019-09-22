@@ -18,7 +18,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            PointsCounter.Instance.AddPoints(1);
+            PointsCounter.Instance.AddPoints(token.value);
             AudioSource.PlayClipAtPoint(token.tokenCollectAudio, token.transform.position);
         }
     }

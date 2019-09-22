@@ -30,6 +30,8 @@ namespace Platformer.Mechanics
         internal int frame = 0;
         internal bool collected = false;
 
+        public int value = 1;
+
         void Awake()
         {
             _renderer = GetComponent<SpriteRenderer>();
