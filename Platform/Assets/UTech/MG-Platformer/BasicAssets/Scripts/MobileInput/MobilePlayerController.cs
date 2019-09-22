@@ -11,11 +11,21 @@ namespace Platformer.Mechanics.Mobile
     {
         public JoystickInput joystick;
 
+        public JumpInput jumpInput;
+
         protected override float HorizontalInput()
         {
             return joystick.HorizontalAxis;
         }
 
+        protected override bool JumpPressed()
+        {
+            return jumpInput.JumpPressed;
+        }
 
+        protected override bool JumpReleased()
+        {
+            return !jumpInput.JumpPressed;
+        }
     }
 }

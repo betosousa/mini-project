@@ -18,7 +18,7 @@ namespace Platformer.Mechanics.Mobile
 
         public float HorizontalAxis { get { return horizontal; } }
 
-        public void OnPointerEnter(PointerEventData pointer)
+        public void OnPointerEnter(PointerEventData pointerEventData)
         {
             pointerOn = true;
         }
