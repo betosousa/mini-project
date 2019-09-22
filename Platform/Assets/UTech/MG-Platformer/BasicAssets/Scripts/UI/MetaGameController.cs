@@ -61,12 +61,17 @@ namespace Platformer.UI
             this.showMainCanvas = show;
         }
 
-        void Update()
+        // void Update()
+        // {
+        //     if (Input.GetButtonDown("Menu"))
+        //     {
+        //         ToggleMainMenu(show: !showMainCanvas);
+        //     }
+        // }
+
+        public void PauseMenu()
         {
-            if (Input.GetButtonDown("Menu"))
-            {
-                ToggleMainMenu(show: !showMainCanvas);
-            }
+            ToggleMainMenu(show: !showMainCanvas);
         }
 
     }
