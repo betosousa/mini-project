@@ -25,5 +25,14 @@ namespace Platformer.UI
         {
             SetActivePanel(0);
         }
+
+        public void QuitApp()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+			Application.Quit();
+#endif
+        }
     }
 }
