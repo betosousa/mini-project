@@ -40,6 +40,11 @@ namespace Platformer.Mechanics
             sprites = idleAnimation;
         }
 
+        void Start()
+        {
+            GameStats.Instance.AddToken(value);
+        }
+
         void OnTriggerEnter2D(Collider2D other)
         {
             //only exectue OnPlayerEnter if the player collides with this token.

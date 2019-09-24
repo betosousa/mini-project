@@ -18,6 +18,7 @@ namespace Platformer.Gameplay
             if (enemy._audio && enemy.ouch)
                 enemy._audio.PlayOneShot(enemy.ouch);
             PointsCounter.Instance.AddPoints(10);
+            GameStats.Instance.CountKills();
         }
     }
 }

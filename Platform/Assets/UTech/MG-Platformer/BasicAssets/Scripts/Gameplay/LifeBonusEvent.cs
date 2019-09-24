@@ -17,6 +17,7 @@ namespace Platformer.Gameplay
         public override void Execute()
         {
             LifeCounter.Instance.GainLife();
+            GameStats.Instance.CountBonusLifes();
             AudioSource.PlayClipAtPoint(bonus.audio, bonus.transform.position);
             bonus.gameObject.SetActive(false);
         }

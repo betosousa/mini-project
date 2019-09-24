@@ -10,11 +10,17 @@ namespace Platformer.Mechanics
     [RequireComponent(typeof(Collider2D))]
     public class OpenBox : MonoBehaviour
     {
+        void Start()
+        {
+            GameStats.Instance.AddBoxes();
+        }
+
         void OnTriggerEnter2D(Collider2D other)
         {
             var player = other.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
+                GameStats.Instance.CountBoxes();
                 gameObject.SetActive(false);
             }
         }

@@ -13,6 +13,12 @@ namespace Platformer.Mechanics
     public class LifeBonus : MonoBehaviour
     {
         public AudioClip audio;
+
+        void Start()
+        {
+            GameStats.Instance.AddBonusLifes();
+        }
+
         void OnTriggerEnter2D(Collider2D other)
         {
             var player = other.gameObject.GetComponent<PlayerController>();

@@ -31,6 +31,11 @@ namespace Platformer.Mechanics
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
+        void Start()
+        {
+            GameStats.Instance.AddEnemy();
+        }
+
         void OnCollisionEnter2D(Collision2D collision)
         {
             var player = collision.gameObject.GetComponent<PlayerController>();

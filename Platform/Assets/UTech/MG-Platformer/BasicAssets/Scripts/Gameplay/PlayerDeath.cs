@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Platformer.Core;
 using Platformer.Model;
+using Platformer.Mechanics;
 using UnityEngine;
 
 namespace Platformer.Gameplay
@@ -26,6 +27,7 @@ namespace Platformer.Gameplay
                 player.controlEnabled = false;
 
                 LifeCounter.Instance.LooseLife();
+                GameStats.Instance.CountDeaths();
 
                 if (player.audioSource && player.ouchAudio)
                     player.audioSource.PlayOneShot(player.ouchAudio);
