@@ -2,6 +2,7 @@
 
 What I want to develop in this project:
 
+* C#;
 * Mobile input;
 * Android build;
 * Lifes counter;
